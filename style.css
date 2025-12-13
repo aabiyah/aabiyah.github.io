@@ -138,12 +138,6 @@ h1 {
   margin-bottom: 12px;
 }
 
-.card p,
-.card a {
-  color: #9CA3AF;
-  text-decoration: none;
-}
-
 /* CONTACT */
 .contact-section {
   text-align: center;
@@ -176,9 +170,11 @@ h1 {
 .card-link {
   display: inline-block;
   margin-top: 16px;
+  font-weight: 600;
   color: #8B5CF6;
-  font-weight: 500;
   text-decoration: none;
+  position: relative;
+  z-index: 5;
 }
 
 .card-link:hover {
