@@ -302,3 +302,24 @@ h1 {
     background-attachment: scroll !important;
   }
 }
+
+/* =========================
+   FORCE PURPLE TEXT LINKS (MOBILE + DESKTOP)
+========================= */
+.card-link {
+  color: #8B5CF6 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-weight: 600;
+}
+
+/* Mobile hover/tap behavior */
+@media (hover: none) {
+  .card-link:hover,
+  .card-link:active {
+    text-decoration: underline;
+    transform: none;
+  }
+}
+
