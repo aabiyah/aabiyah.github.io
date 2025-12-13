@@ -25,7 +25,8 @@ body {
     url('assets/background.png');
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* mobile-safe */
+  background-attachment: fixed; 
+  will-change: background-position;
 }
 
 /* =========================
@@ -213,9 +214,9 @@ h1 {
    MOBILE FIXES
 ========================= */
 @media (max-width: 768px) {
-
   body {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
+    will-change: auto;
   }
 
   .hero {
@@ -276,5 +277,11 @@ h1 {
   .cta {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
   }
 }
