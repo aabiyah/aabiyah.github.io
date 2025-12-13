@@ -269,6 +269,11 @@ h1 {
   flex-wrap: wrap;
 }
 
+
+.section {
+  text-align: left;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
