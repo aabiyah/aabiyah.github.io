@@ -15,13 +15,12 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
 
-  /* Full-page background */
   background:
     linear-gradient(
       rgba(11, 11, 15, 0.85),
       rgba(11, 11, 15, 0.85)
     ),
-    url('./assets/background.png');
+    url('assets/background.png');
 
   background-size: cover;
   background-position: center;
@@ -48,11 +47,19 @@ body {
 /* Tagline */
 .tag {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #8B5CF6;
+}
+
+/* Name */
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #E5E7EB;
+  margin-bottom: 18px;
 }
 
 /* Headline */
@@ -93,11 +100,7 @@ h1 {
   font-weight: 600;
   text-decoration: none;
   color: #000;
-  background: linear-gradient(
-    90deg,
-    #8B5CF6,
-    #38BDF8
-  );
+  background: linear-gradient(90deg, #8B5CF6, #38BDF8);
   box-shadow:
     0 0 30px rgba(139, 92, 246, 0.45),
     0 0 60px rgba(56, 189, 248, 0.25);
@@ -112,7 +115,7 @@ h1 {
 }
 
 /* =========================
-   HERO VISUAL (PROFILE PHOTO)
+   HERO VISUAL
 ========================= */
 .hero-visual {
   position: relative;
@@ -123,12 +126,10 @@ h1 {
   justify-content: center;
 }
 
-/* Glow behind photo */
 .hero-visual::before {
   content: "";
   position: absolute;
-  width: 440px;
-  height: 440px;
+  inset: -40px;
   background: radial-gradient(
     circle,
     rgba(139, 92, 246, 0.45),
@@ -146,7 +147,6 @@ h1 {
   object-fit: cover;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(6px);
   box-shadow:
     0 0 80px rgba(139, 92, 246, 0.35),
     0 0 120px rgba(56, 189, 248, 0.15);
