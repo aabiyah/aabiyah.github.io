@@ -1,36 +1,24 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   GLOBAL STYLES
-========================= */
+/* GLOBAL */
 body {
   font-family: 'Space Grotesk', sans-serif;
   color: #FFFFFF;
   line-height: 1.6;
-
   background:
-    linear-gradient(
-      rgba(11, 11, 15, 0.85),
-      rgba(11, 11, 15, 0.85)
-    ),
+    linear-gradient(rgba(11,11,15,0.85), rgba(11,11,15,0.85)),
     url('assets/background.png');
-
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -44,130 +32,94 @@ body {
   max-width: 640px;
 }
 
-/* Tagline */
 .tag {
-  display: inline-block;
-  margin-bottom: 14px;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #8B5CF6;
+  margin-bottom: 12px;
 }
 
-/* Name */
 .name {
   font-size: 20px;
   font-weight: 600;
-  color: #E5E7EB;
   margin-bottom: 18px;
+  color: #E5E7EB;
 }
 
-/* Headline */
 h1 {
   font-size: 64px;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-/* Gradient word */
 .gradient-text {
-  background: linear-gradient(
-    90deg,
-    #8B5CF6 0%,
-    #6366F1 50%,
-    #38BDF8 100%
-  );
+  background: linear-gradient(90deg, #8B5CF6, #6366F1, #38BDF8);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/* Hero paragraph */
 .hero p {
   font-size: 18px;
   color: #9CA3AF;
-  max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* CTA */
 .cta {
   display: inline-block;
   padding: 14px 30px;
   border-radius: 999px;
   font-weight: 600;
-  text-decoration: none;
   color: #000;
   background: linear-gradient(90deg, #8B5CF6, #38BDF8);
-  box-shadow:
-    0 0 30px rgba(139, 92, 246, 0.45),
-    0 0 60px rgba(56, 189, 248, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 50px rgba(139, 92, 246, 0.65),
-    0 0 90px rgba(56, 189, 248, 0.4);
-}
-
-/* =========================
-   HERO VISUAL
-========================= */
-.hero-visual {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
   position: relative;
+  z-index: 10;
+}
+
+/* HERO VISUAL */
+.hero-visual {
   width: 380px;
   height: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .hero-visual::before {
   content: "";
   position: absolute;
   inset: -40px;
-  background: radial-gradient(
-    circle,
-    rgba(139, 92, 246, 0.45),
-    rgba(56, 189, 248, 0.25),
-    transparent 70%
-  );
+  background: radial-gradient(circle, rgba(139,92,246,0.45), rgba(56,189,248,0.25), transparent 70%);
   filter: blur(70px);
   z-index: -1;
 }
 
-/* Profile image */
 .profile-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 0 80px rgba(139, 92, 246, 0.35),
-    0 0 120px rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 .section {
-  padding: 140px 120px;
+  padding: 110px 120px;
+}
+
+.section.compact {
+  padding-top: 60px;
 }
 
 .section-title {
   font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -177,83 +129,46 @@ h1 {
 .card {
   padding: 32px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, border 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(139, 92, 246, 0.6);
 }
 
 .card h3 {
-  font-size: 20px;
   margin-bottom: 12px;
 }
 
-.card p {
+.card p,
+.card a {
   color: #9CA3AF;
+  text-decoration: none;
 }
 
-/* =========================
-   CTA SECTION
-========================= */
-.cta-section {
-  padding: 160px 120px;
+/* CONTACT */
+.contact-section {
   text-align: center;
 }
 
-.cta-section h2 {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 32px;
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.contact-form textarea {
+  width: 100%;
+  height: 140px;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 24px;
+  font-family: inherit;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    padding: 100px 40px;
+    padding: 80px 32px;
     text-align: center;
   }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-visual {
-    margin-top: 60px;
-  }
-
-  .section,
-  .cta-section {
-    padding: 100px 40px;
-  }
 }
-
-@media (max-width: 640px) {
-  h1 {
-    font-size: 44px;
-  }
-
-  .section-title {
-    font-size: 32px;
-  }
-
-  .hero-visual {
-    width: 280px;
-    height: 280px;
-  }
-}
-
-.section-intro {
-  max-width: 720px;
-  color: #9CA3AF;
-  font-size: 18px;
-  margin-bottom: 48px;
-}
-
