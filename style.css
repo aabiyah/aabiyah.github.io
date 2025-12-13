@@ -25,7 +25,7 @@ body {
     url('assets/background.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   will-change: background-position;
 }
 
@@ -79,7 +79,6 @@ h1 {
   margin-bottom: 32px;
 }
 
-/* Hero actions */
 .hero-actions {
   display: flex;
   align-items: center;
@@ -153,7 +152,6 @@ h1 {
 ========================= */
 .section {
   padding: 110px 120px;
-  text-align: left;
 }
 
 .section.compact {
@@ -193,21 +191,19 @@ h1 {
    PURPLE TEXT LINKS
 ========================= */
 .card-link {
-  color: #8B5CF6; /* purple */
-  background: none;
-  box-shadow: none;
-  padding: 0;
+  color: #8B5CF6 !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
   font-weight: 600;
 }
 
 .card-link:hover {
   text-decoration: underline;
-  transform: none;
 }
 
-
 /* =========================
-   CONTACT (CENTERED + BIGGER INPUT)
+   CONTACT (FIXED)
 ========================= */
 .contact-section {
   min-height: 100vh;
@@ -217,18 +213,15 @@ h1 {
   text-align: center;
 }
 
-.contact-section .section-title {
-  margin-bottom: 24px;
-}
-
+.contact-section .section-title,
 .contact-section .section-intro {
-  margin: 0 auto 32px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Form container */
 .contact-form {
-  max-width: 720px; /* wider */
+  max-width: 720px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -236,10 +229,10 @@ h1 {
   align-items: center;
 }
 
-/* Bigger text box */
 .contact-form textarea {
   width: 100%;
-  min-height: 180px; /* BIGGER */
+  max-width: 90%;
+  min-height: 180px;
   padding: 20px 22px;
   border-radius: 18px;
   font-size: 16px;
@@ -250,7 +243,6 @@ h1 {
   margin-bottom: 28px;
 }
 
-/* Buttons row */
 .contact-actions {
   display: flex;
   gap: 20px;
@@ -258,11 +250,11 @@ h1 {
   flex-wrap: wrap;
 }
 
-
 /* =========================
    MOBILE FIXES
 ========================= */
 @media (max-width: 768px) {
+
   body {
     background-attachment: scroll !important;
     will-change: auto;
@@ -313,13 +305,15 @@ h1 {
   .card {
     padding: 24px;
   }
-   
-   .contact-section {
-    padding: 80px 20px;
+
+  .contact-actions {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .contact-form textarea {
-    min-height: 160px;
+  .contact-actions .cta {
+    width: 90%;
+    max-width: 320px;
   }
 }
 
@@ -333,33 +327,14 @@ h1 {
 
   .cta {
     width: 100%;
-    justify-content: center;
   }
 }
 
+/* =========================
+   iOS SAFETY
+========================= */
 @supports (-webkit-touch-callout: none) {
   body {
     background-attachment: scroll !important;
   }
 }
-
-/* =========================
-   FORCE PURPLE TEXT LINKS (MOBILE + DESKTOP)
-========================= */
-.card-link {
-  color: #8B5CF6 !important;
-  background: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  font-weight: 600;
-}
-
-/* Mobile hover/tap behavior */
-@media (hover: none) {
-  .card-link:hover,
-  .card-link:active {
-    text-decoration: underline;
-    transform: none;
-  }
-}
-
