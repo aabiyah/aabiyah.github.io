@@ -322,14 +322,16 @@ h1 {
   }
 
   .contact-actions {
-    flex-direction: column;
-    width: 100%;
-  }
+     flex-direction: column;
+     align-items: center;   /* TRUE centering */
+     gap: 16px;
+   }
 
-  .contact-actions .cta {
-    width: 90%;
-    max-width: 320px;
-  }
+   .contact-actions .cta {
+     width: auto;           /* stop stretching */
+     min-width: 220px;      /* consistent size */
+     max-width: 320px;
+   }
 
    .contact-section {
     padding: 80px 20px;
