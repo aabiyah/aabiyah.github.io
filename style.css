@@ -180,11 +180,12 @@ h1 {
 
 .section-intro {
   max-width: 720px;
-  margin: 0 auto 32px;
+  margin-bottom: 32px;
   color: #9CA3AF;
   font-size: 18px;
-   text-align: left;
+  text-align: left;
 }
+
 
 /* =========================
    CARDS
