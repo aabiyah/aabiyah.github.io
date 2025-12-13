@@ -203,50 +203,65 @@ h1 {
 }
 
 /* =========================
-   CONTACT (FIXED)
+   CONTACT – FIXED LAYOUT
 ========================= */
 .contact-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contact-section > * {
   text-align: center;
 }
 
-.contact-section .section-title,
+/* Wrapper behavior */
+.contact-section {
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Title */
+.contact-section .section-title {
+  margin-bottom: 12px;
+}
+
+/* Intro text */
 .contact-section .section-intro {
+  max-width: 720px;
+  margin: 0 auto 24px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+/* Form */
 .contact-form {
-  max-width: 720px;
   width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Bigger textarea */
 .contact-form textarea {
   width: 100%;
-  max-width: 90%;
-  min-height: 180px;
-  padding: 20px 22px;
-  border-radius: 18px;
+  min-height: 200px;
+  padding: 22px 24px;
   font-size: 16px;
-  line-height: 1.6;
+  border-radius: 20px;
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #FFFFFF;
-  margin-bottom: 28px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  margin-bottom: 32px;
 }
 
+/* Buttons */
 .contact-actions {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -314,6 +329,14 @@ h1 {
   .contact-actions .cta {
     width: 90%;
     max-width: 320px;
+  }
+
+   .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-form textarea {
+    min-height: 160px;
   }
 }
 
