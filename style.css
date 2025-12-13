@@ -7,10 +7,22 @@
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background: #0B0B0F;
   color: #FFFFFF;
   line-height: 1.6;
+
+  background: 
+    linear-gradient(
+      rgba(11, 11, 15, 0.85),
+      rgba(11, 11, 15, 0.85)
+    ),
+    url('./assets/background.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 /* HERO */
 .hero {
@@ -41,20 +53,30 @@ h1 {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #8B5CF6, #38BDF8);
+  background: linear-gradient(
+    90deg,
+    #8B5CF6,
+    #6366F1,
+    #38BDF8
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.hero p {
-  color: #9CA3AF;
-  font-size: 18px;
-  margin-bottom: 32px;
-}
 
-.hero-visual img {
-  width: 420px;
-  filter: drop-shadow(0 0 80px rgba(139, 92, 246, 0.35));
+.profile-photo {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 24px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 0 80px rgba(139, 92, 246, 0.35),
+    0 0 120px rgba(56, 189, 248, 0.15);
+
+  backdrop-filter: blur(6px);
 }
 
 /* BUTTON */
