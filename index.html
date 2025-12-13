@@ -176,20 +176,15 @@
     Feel free to reach out.
   </p>
 
-  <form
-    class="contact-form"
-    action="mailto:aabiyahzehra1@gmail.com"
-    method="POST"
-    enctype="text/plain"
-  >
+  <div class="contact-form">
     <textarea
-      name="message"
+      id="contactMessage"
       placeholder="Write your message here..."
       required
     ></textarea>
 
     <div class="contact-actions">
-      <button type="submit" class="cta">Send Email</button>
+      <button class="cta" onclick="sendEmail()">Send Email</button>
 
       <a
         href="https://www.linkedin.com/in/aabiyah-zehra-526528202/"
@@ -200,10 +195,44 @@
         Connect on LinkedIn
       </a>
     </div>
-  </form>
+  </div>
 </section>
 
+<script>
+  function sendEmail() {
+    const message = document.getElementById("contactMessage").value.trim();
 
+    if (!message) {
+      alert("Please write a message before sending.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Portfolio Contact");
+    const body = encodeURIComponent(message);
+
+    window.location.href =
+      `mailto:aabiyahzehra1@gmail.com?subject=${subject}&body=${body}`;
+  }
+</script>
+
+
+<!-- ================= READING ================= -->
+<section class="section compact">
+  <h2 class="section-title">What I Like to Read</h2>
+
+  <p class="section-intro">
+    I also enjoy reading!
+  </p>
+
+  <a
+    href="https://www.goodreads.com/user/show/146254088-aabiyah"
+    class="cta secondary-cta"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Connect with Me on Goodreads
+  </a>
+</section>
 
 </body>
 </html>
