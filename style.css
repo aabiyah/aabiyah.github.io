@@ -1,11 +1,15 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* GLOBAL */
+/* =========================
+   GLOBAL
+========================= */
 body {
   font-family: 'Space Grotesk', sans-serif;
   color: #FFFFFF;
@@ -18,7 +22,9 @@ body {
   background-attachment: fixed;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -66,7 +72,16 @@ h1 {
   margin-bottom: 32px;
 }
 
-/* CTA */
+/* Hero actions */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
 .cta {
   display: inline-block;
   padding: 14px 30px;
@@ -81,7 +96,21 @@ h1 {
   z-index: 10;
 }
 
-/* HERO VISUAL */
+/* LinkedIn text link */
+.linkedin-link {
+  color: #9CA3AF;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linkedin-link:hover {
+  color: #38BDF8;
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
 .hero-visual {
   width: 380px;
   height: 380px;
@@ -92,7 +121,12 @@ h1 {
   content: "";
   position: absolute;
   inset: -40px;
-  background: radial-gradient(circle, rgba(139,92,246,0.45), rgba(56,189,248,0.25), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(139,92,246,0.45),
+    rgba(56,189,248,0.25),
+    transparent 70%
+  );
   filter: blur(70px);
   z-index: -1;
 }
@@ -105,7 +139,9 @@ h1 {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 .section {
   padding: 110px 120px;
 }
@@ -119,7 +155,16 @@ h1 {
   margin-bottom: 56px;
 }
 
-/* CARDS */
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  color: #9CA3AF;
+  font-size: 18px;
+}
+
+/* =========================
+   CARDS
+========================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -138,57 +183,20 @@ h1 {
   margin-bottom: 12px;
 }
 
-/* CONTACT */
-.contact-section {
-  text-align: center;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-form textarea {
-  width: 100%;
-  height: 140px;
-  padding: 16px;
-  border-radius: 16px;
-  border: none;
-  margin-bottom: 24px;
-  font-family: inherit;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    padding: 80px 32px;
-    text-align: center;
-  }
-}
-
+/* Card CTA (button-style) */
 .card-link {
   display: inline-block;
   margin-top: 18px;
   padding: 10px 20px;
-
   font-weight: 600;
   font-size: 14px;
-
   color: #0B0B0F;
-  background: linear-gradient(
-    90deg,
-    #8B5CF6,
-    #38BDF8
-  );
-
+  background: linear-gradient(90deg, #8B5CF6, #38BDF8);
   border-radius: 999px;
   text-decoration: none;
-
   box-shadow:
     0 0 20px rgba(139, 92, 246, 0.45),
     0 0 40px rgba(56, 189, 248, 0.25);
-
   position: relative;
   z-index: 5;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -201,20 +209,69 @@ h1 {
     0 0 60px rgba(56, 189, 248, 0.4);
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+/* =========================
+   CONTACT
+========================= */
+.contact-section {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
-.linkedin-link {
+.contact-form {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 15px;
+  background: rgba(255,255,255,0.06);
+  color: #FFFFFF;
+  margin-bottom: 28px;
+}
+
+.contact-form textarea::placeholder {
   color: #9CA3AF;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-.linkedin-link:hover {
-  color: #38BDF8;
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Secondary CTA (LinkedIn button) */
+.secondary-cta {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: none;
+}
+
+.secondary-cta:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 80px 32px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
