@@ -83,29 +83,52 @@ h1 {
    BUTTONS
 ========================= */
 .cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 14px 30px;
   border-radius: 999px;
+
   font-weight: 600;
-  color: #000;
+  font-size: 15px; /* unified font size */
+
+  color: #0B0B0F;
   background: linear-gradient(90deg, #8B5CF6, #38BDF8);
+
   text-decoration: none;
   border: none;
   cursor: pointer;
+
   position: relative;
   z-index: 10;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* LinkedIn text link */
-.linkedin-link {
-  color: #9CA3AF;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.65),
+    0 0 60px rgba(56, 189, 248, 0.4);
 }
 
-.linkedin-link:hover {
-  color: #38BDF8;
+/* Email CTA */
+.email-cta {
+  background: linear-gradient(90deg, #8B5CF6, #38BDF8);
+}
+
+/* LinkedIn colourful CTA */
+.linkedin-cta {
+  background: linear-gradient(
+    90deg,
+    #0A66C2,
+    #38BDF8
+  );
+  color: #FFFFFF;
+  box-shadow:
+    0 0 20px rgba(10, 102, 194, 0.45),
+    0 0 40px rgba(56, 189, 248, 0.25);
 }
 
 /* =========================
@@ -160,6 +183,7 @@ h1 {
   margin: 0 auto 32px;
   color: #9CA3AF;
   font-size: 18px;
+   text-align: left;
 }
 
 /* =========================
@@ -183,7 +207,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-/* Card CTA (button-style) */
+/* Card CTA */
 .card-link {
   display: inline-block;
   margin-top: 18px;
@@ -197,39 +221,27 @@ h1 {
   box-shadow:
     0 0 20px rgba(139, 92, 246, 0.45),
     0 0 40px rgba(56, 189, 248, 0.25);
-  position: relative;
-  z-index: 5;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-link:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 0 30px rgba(139, 92, 246, 0.65),
-    0 0 60px rgba(56, 189, 248, 0.4);
 }
 
-/* CONTACT SECTION */
+/* =========================
+   CONTACT
+========================= */
 .contact-section {
   text-align: center;
   padding-top: 70px;
   padding-bottom: 90px;
 }
 
-.section-intro {
-  max-width: 720px;
-  margin: 0 auto 28px;
-  color: #9CA3AF;
-  font-size: 18px;
-}
-
-/* Contact form container */
 .contact-form {
   max-width: 640px;
   margin: 0 auto;
 }
 
-/* Textarea */
 .contact-form textarea {
   width: 100%;
   height: 110px;
@@ -238,13 +250,10 @@ h1 {
   border: none;
   outline: none;
   resize: vertical;
-
   font-family: inherit;
   font-size: 15px;
-
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255,255,255,0.06);
   color: #FFFFFF;
-
   margin-bottom: 22px;
 }
 
@@ -252,26 +261,12 @@ h1 {
   color: #9CA3AF;
 }
 
-/* Buttons */
 .contact-actions {
   display: flex;
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }
-
-/* Secondary CTA */
-.secondary-cta {
-  background: transparent;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: none;
-}
-
-.secondary-cta:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
 
 /* =========================
    RESPONSIVE
