@@ -209,57 +209,69 @@ h1 {
     0 0 60px rgba(56, 189, 248, 0.4);
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT SECTION */
 .contact-section {
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 90px;
 }
 
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: #9CA3AF;
+  font-size: 18px;
+}
+
+/* Contact form container */
 .contact-form {
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
+/* Textarea */
 .contact-form textarea {
   width: 100%;
-  height: 120px;
-  padding: 18px 20px;
-  border-radius: 20px;
+  height: 110px;
+  padding: 16px 18px;
+  border-radius: 18px;
   border: none;
   outline: none;
   resize: vertical;
+
   font-family: inherit;
   font-size: 15px;
-  background: rgba(255,255,255,0.06);
+
+  background: rgba(255, 255, 255, 0.06);
   color: #FFFFFF;
-  margin-bottom: 28px;
+
+  margin-bottom: 22px;
 }
 
 .contact-form textarea::placeholder {
   color: #9CA3AF;
 }
 
+/* Buttons */
 .contact-actions {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
-/* Secondary CTA (LinkedIn button) */
+/* Secondary CTA */
 .secondary-cta {
   background: transparent;
   color: #FFFFFF;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: none;
 }
 
 .secondary-cta:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
+
 
 /* =========================
    RESPONSIVE
