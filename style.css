@@ -172,3 +172,15 @@ h1 {
     text-align: center;
   }
 }
+
+.card-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #8B5CF6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
