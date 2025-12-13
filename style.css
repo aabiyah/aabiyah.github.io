@@ -190,6 +190,23 @@ h1 {
 }
 
 /* =========================
+   PURPLE TEXT LINKS
+========================= */
+.card-link {
+  color: #8B5CF6; /* purple */
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+  transform: none;
+}
+
+
+/* =========================
    CONTACT
 ========================= */
 .contact-section {
